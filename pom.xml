@@ -363,6 +363,7 @@
                             <!-- Only enabling model andopenapi-generator-maven-plugin API generation -->
                             <modelNameSuffix>Dto</modelNameSuffix>
                             <apiPackage>org.springframework.samples.petclinic.rest.api</apiPackage>
+                            <addCompileSourceRoot>false</addCompileSourceRoot>
                             <generateModels>true</generateModels>
                             <modelPackage>org.springframework.samples.petclinic.rest.dto</modelPackage>
                             <generateApis>true</generateApis>
@@ -384,24 +385,6 @@
                                 <!-- switch documentation provider to springdoc -->
                                 <documentationProvider>springdoc</documentationProvider>
                             </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>target/generated-sources/openapi/src/main/java</source>
-                            </sources>
                         </configuration>
                     </execution>
                 </executions>
